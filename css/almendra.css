@@ -1,5 +1,5 @@
 /* ============================================================
-   ALMENDRA — joyería · florecer despacio
+   ALMENDRA · joyería · florecer despacio
    Sistema visual basado en el Manual de marca 2026
    ============================================================ */
 
@@ -22,6 +22,9 @@
 
   /* Derivados */
   --cream: #F8F3E6;
+  /* Taupe oscurecido para textos: el taupe puro da 2.5:1 sobre crema
+     y no se lee. Este llega a 5.3:1 sin salirse de la familia olive. */
+  --text-muted: #6E6446;
   --hairline: rgba(91, 89, 15, 0.18);
   --hairline-strong: rgba(91, 89, 15, 0.32);
 
@@ -32,6 +35,11 @@
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --header-h: 84px;
+
+  /* Italiana solo existe en peso 400: engrosamos el trazo en em
+     para que escale con el tamaño. Subir/bajar para calibrar. */
+  --display-stroke: 0.013em;
+  --display-stroke-sm: 0.007em;
 }
 
 /* ---------- Reset ---------- */
@@ -79,6 +87,23 @@ body::after {
   font-weight: 400;
   line-height: 1.02;
   letter-spacing: 0.005em;
+}
+
+/* Títulos de página: trazo engrosado */
+.hero-title,
+.about-hero h1,
+.page-hero h1,
+.pdp-info h1 {
+  -webkit-text-stroke: var(--display-stroke) currentColor;
+}
+
+/* Títulos de sección: engrosado más leve */
+.section-head h2,
+.editorial-copy h2,
+.band h2,
+.newsletter h2,
+.mobile-menu a {
+  -webkit-text-stroke: var(--display-stroke-sm) currentColor;
 }
 
 .voice {
@@ -342,10 +367,19 @@ body::after {
 }
 
 .hero-title {
-  font-size: clamp(3.4rem, 8.5vw, 7.8rem);
+  font-size: clamp(3.6rem, 9.4vw, 8.4rem);
   color: var(--cream);
 }
-.hero-title .amber { color: var(--amber); }
+.hero-title em {
+  display: block;
+  font-family: var(--font-voice);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.02em;
+  color: var(--amber);
+  -webkit-text-stroke: 0;
+  margin-top: -0.04em;
+}
 .hero-sub {
   font-family: var(--font-voice);
   font-style: italic;
@@ -407,10 +441,14 @@ body::after {
 .hero-badge text {
   font-family: var(--font-ui);
   font-size: 10.5px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 3.2px;
   text-transform: uppercase;
   fill: var(--amber-soft);
+  stroke: var(--ink);
+  stroke-width: 4.5px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
 }
 
 .hero-scroll {
@@ -422,7 +460,7 @@ body::after {
   font-size: 0.68rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(237, 228, 208, 0.6);
+  color: var(--sand);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -561,18 +599,22 @@ body::after {
   text-align: center;
   padding: 20px 8px 0;
 }
+/* Nombres de producto: Jost Medium 500, según la jerarquía UI del manual */
 .product-card .name {
-  font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 1.06rem;
+  line-height: 1.35;
   color: var(--ink);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.015em;
 }
 .product-card .detail {
   font-family: var(--font-voice);
   font-style: italic;
-  font-size: 0.98rem;
-  color: var(--taupe);
-  margin-top: 3px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 .product-card .price {
   font-weight: 600;
@@ -630,13 +672,18 @@ body::after {
   height: 120px;
   animation: spin 24s linear infinite reverse;
 }
+/* Halo del color del fondo para que el sello se lea al cruzar la foto */
 .editorial-figure .stamp text {
   font-family: var(--font-ui);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
   fill: var(--olive);
+  stroke: var(--bone);
+  stroke-width: 3.5px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
 }
 .editorial-copy h2 {
   font-size: clamp(2.4rem, 4.4vw, 3.9rem);
@@ -648,7 +695,7 @@ body::after {
   color: var(--olive);
 }
 .editorial-copy p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.06rem;
   color: var(--ink-soft);
   max-width: 52ch;
@@ -697,15 +744,17 @@ body::after {
 .cat-card:hover .ring img { transform: scale(1.08); }
 .cat-card .cat-name {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-top: 24px;
   letter-spacing: 0.05em;
+  -webkit-text-stroke: var(--display-stroke-sm) currentColor;
 }
 .cat-card .cat-sub {
   font-family: var(--font-voice);
   font-style: italic;
-  color: var(--taupe);
-  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 1rem;
 }
 
 /* ---------- Valores / ritual ---------- */
@@ -736,11 +785,12 @@ body::after {
 .value h3 {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   margin-bottom: 12px;
+  -webkit-text-stroke: var(--display-stroke-sm) currentColor;
 }
 .value p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.98rem;
   color: var(--ink-soft);
   max-width: 30ch;
@@ -775,7 +825,7 @@ body::after {
 }
 .band h2 em { font-family: var(--font-voice); font-style: italic; color: var(--amber); }
 .band p {
-  font-weight: 300;
+  font-weight: 400;
   color: var(--sand);
   max-width: 50ch;
   margin-bottom: 16px;
@@ -811,7 +861,7 @@ body::after {
 }
 .newsletter h2 em { font-family: var(--font-voice); font-style: italic; color: var(--olive); }
 .newsletter p {
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink-soft);
   max-width: 46ch;
   margin: 0 auto 38px;
@@ -834,7 +884,7 @@ body::after {
   color: var(--ink);
   outline: none;
 }
-.news-form input::placeholder { color: var(--taupe); }
+.news-form input::placeholder { color: var(--text-muted); }
 .news-form button {
   font-weight: 600;
   font-size: 0.75rem;
@@ -878,7 +928,7 @@ body::after {
 }
 .site-footer li { margin-bottom: 12px; }
 .site-footer li a {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.95rem;
   transition: color 0.3s ease, padding-left 0.3s ease;
 }
@@ -893,9 +943,9 @@ body::after {
   gap: 20px;
   flex-wrap: wrap;
   font-size: 0.78rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.08em;
-  color: rgba(223, 210, 181, 0.65);
+  color: var(--sand);
 }
 .footer-big {
   font-family: var(--font-display);
@@ -924,7 +974,7 @@ body::after {
   font-family: var(--font-voice);
   font-style: italic;
   font-size: 1.25rem;
-  color: var(--taupe);
+  color: var(--text-muted);
   margin-top: 14px;
 }
 
@@ -958,7 +1008,7 @@ body::after {
   text-align: center;
   font-family: var(--font-voice);
   font-style: italic;
-  color: var(--taupe);
+  color: var(--text-muted);
   font-size: 1.05rem;
   margin-top: 60px;
 }
@@ -974,7 +1024,7 @@ body::after {
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--taupe);
+  color: var(--text-muted);
   display: flex;
   gap: 12px;
   align-items: center;
@@ -1046,14 +1096,14 @@ body::after {
 }
 .pdp-price .cuotas {
   display: block;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
-  color: var(--taupe);
+  color: var(--text-muted);
   margin-top: 4px;
 }
 .pdp-desc {
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink-soft);
   margin: 26px 0;
   max-width: 52ch;
@@ -1076,7 +1126,7 @@ body::after {
   font-size: 0.9rem;
   text-transform: none;
   letter-spacing: 0.02em;
-  color: var(--taupe);
+  color: var(--text-muted);
 }
 .sizes { display: flex; gap: 10px; margin-bottom: 30px; }
 .size {
@@ -1131,7 +1181,7 @@ body::after {
   display: flex;
   gap: 12px;
   align-items: center;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.88rem;
   color: var(--ink-soft);
 }
@@ -1160,7 +1210,7 @@ body::after {
 }
 .accordion[open] summary::after { transform: rotate(45deg); }
 .accordion .acc-body {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.95rem;
   color: var(--ink-soft);
   padding-bottom: 22px;
@@ -1175,7 +1225,7 @@ body::after {
 .about-hero {
   background: var(--olive);
   color: var(--bone);
-  padding: calc(var(--header-h) + clamp(60px, 9vw, 110px)) 0 0;
+  padding: calc(var(--header-h) + clamp(26px, 3.5vw, 52px)) 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -1190,8 +1240,11 @@ body::after {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: clamp(40px, 6vw, 90px);
-  align-items: end;
+  /* El texto se centra contra la foto; la foto queda al ras del borde.
+     Con align-items:end el texto caía al fondo y dejaba un hueco arriba. */
+  align-items: center;
 }
+.about-hero .wrap > figure { align-self: end; }
 .about-hero h1 {
   font-size: clamp(3.2rem, 7vw, 6.4rem);
   color: var(--cream);
@@ -1202,13 +1255,13 @@ body::after {
 .about-hero p.lead {
   font-family: var(--font-voice);
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: var(--amber-soft);
   max-width: 40ch;
-  margin-bottom: clamp(50px, 7vw, 90px);
+  margin-bottom: 0;
 }
 .about-hero .arch {
-  aspect-ratio: 3 / 3.6;
+  aspect-ratio: 3 / 3.15;
   transform: translateY(1px);
 }
 
@@ -1227,7 +1280,7 @@ body::after {
   margin-top: 24px;
 }
 .story-body p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.08rem;
   color: var(--ink-soft);
   margin-bottom: 24px;
@@ -1296,10 +1349,10 @@ body::after {
   font-size: 0.7rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--taupe);
+  color: var(--text-muted);
   margin-bottom: 6px;
 }
-.contact-item .v { font-weight: 300; font-size: 1.05rem; }
+.contact-item .v { font-weight: 400; font-size: 1.05rem; }
 .contact-item .v a { border-bottom: 1px solid var(--amber); transition: color 0.3s; }
 .contact-item .v a:hover { color: var(--olive); }
 
@@ -1328,7 +1381,7 @@ body::after {
   background: transparent;
   font-family: var(--font-ui);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   padding: 10px 2px;
   color: var(--ink);
   outline: none;
@@ -1375,13 +1428,18 @@ body::after {
   padding: 26px 30px;
   border-bottom: 1px solid var(--hairline);
 }
-.cart-head h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; }
+.cart-head h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.8rem;
+  -webkit-text-stroke: var(--display-stroke-sm) currentColor;
+}
 .cart-head button {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--taupe);
+  color: var(--text-muted);
   transition: color 0.3s;
 }
 .cart-head button:hover { color: var(--terracota); }
@@ -1401,16 +1459,22 @@ body::after {
   object-fit: cover;
   border-radius: 999px 999px 8px 8px;
 }
-.cart-item .ci-name { font-family: var(--font-display); font-size: 1.15rem; }
+.cart-item .ci-name {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
 .cart-item .ci-detail {
   font-family: var(--font-voice);
   font-style: italic;
-  font-size: 0.88rem;
-  color: var(--taupe);
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--text-muted);
 }
 .cart-item .ci-qty {
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink-soft);
   margin-top: 6px;
 }
@@ -1420,7 +1484,7 @@ body::after {
   font-family: var(--font-voice);
   font-style: italic;
   text-align: center;
-  color: var(--taupe);
+  color: var(--text-muted);
   font-size: 0.95rem;
   padding: 16px 30px 0;
 }
@@ -1437,9 +1501,9 @@ body::after {
   margin-bottom: 6px;
 }
 .cart-foot .small {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.8rem;
-  color: var(--taupe);
+  color: var(--text-muted);
   margin-bottom: 18px;
 }
 .cart-foot .btn { width: 100%; }

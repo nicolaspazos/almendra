@@ -1,4 +1,4 @@
-/* Almendra — interacciones del sitio */
+/* Almendra · interacciones del sitio */
 (function () {
   'use strict';
 
