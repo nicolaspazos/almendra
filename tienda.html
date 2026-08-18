@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda — Almendra Joyería</title>
+  <meta name="description" content="Anillos, collares, aros y pulseras en plata 925 y piedras naturales. Hecho a mano en pequeñas series.">
+  <link rel="icon" type="image/png" href="assets/img/logo-olive.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/almendra.css">
+</head>
+<body>
+
+  <header class="site-header site-header--solid">
+    <div class="wrap">
+      <nav class="nav-left">
+        <a class="nav-link is-active" href="tienda.html">Tienda</a>
+        <a class="nav-link" href="nosotros.html">Nosotros</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+      </nav>
+      <a class="brand" href="index.html" aria-label="Almendra — inicio">
+        <img class="logo-dark" src="assets/img/logo-olive.png" alt="Almendra">
+      </a>
+      <div class="nav-right">
+        <button class="icon-btn" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Carrito" data-open-cart>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-count">2</span>
+        </button>
+        <button class="icon-btn menu-toggle" aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu">
+    <button class="close-menu">Cerrar ✕</button>
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda <em>· piezas</em></a>
+    <a href="nosotros.html">Nosotros <em>· el taller</em></a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- ══════════ Encabezado ══════════ -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--center reveal">Colección · Otoño 2026</span>
+      <h1 class="display reveal" data-delay="1">La <em>tienda</em></h1>
+      <p class="voice-sub reveal" data-delay="2">doce piezas, ninguna igual a otra</p>
+
+      <div class="filters reveal" data-delay="3">
+        <button class="chip is-active" data-filter="todo">Todo</button>
+        <button class="chip" data-filter="anillos">Anillos</button>
+        <button class="chip" data-filter="collares">Collares</button>
+        <button class="chip" data-filter="aros">Aros</button>
+        <button class="chip" data-filter="pulseras">Pulseras</button>
+        <button class="chip" data-filter="colgantes">Colgantes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Grilla ══════════ -->
+  <section class="wrap" style="padding-bottom: clamp(80px, 10vw, 140px);">
+    <div class="product-grid product-grid--3">
+
+      <a class="product-card reveal" data-cat="anillos" href="producto.html">
+        <span class="card-tag">Nuevo</span>
+        <div class="frame"><img src="assets/img/producto-caleandula.jpg" alt="Anillo Caléndula"></div>
+        <button class="quick-add" data-add="Anillo Caléndula">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Anillo Caléndula</div>
+          <div class="detail">Plata 925 · Piedra luna</div>
+          <div class="price">$ 78.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="aros" data-delay="1" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-aro-lunar.jpg" alt="Aros Lunar"></div>
+        <button class="quick-add" data-add="Aros Lunar">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Aros Lunar</div>
+          <div class="detail">Plata 925 · Nácar</div>
+          <div class="price">$ 64.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="collares" data-delay="2" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-brote.jpg" alt="Collar Brote"></div>
+        <button class="quick-add" data-add="Collar Brote">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Collar Brote</div>
+          <div class="detail">Baño de oro 18k</div>
+          <div class="price">$ 92.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="pulseras" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-hilo-agua.jpg" alt="Pulsera Hilo de Agua"></div>
+        <button class="quick-add" data-add="Pulsera Hilo de Agua">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Pulsera Hilo de Agua</div>
+          <div class="detail">Plata 925 · Aguamarina</div>
+          <div class="price">$ 71.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="colgantes" data-delay="1" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-hoja.jpg" alt="Colgante Hoja"></div>
+        <button class="quick-add" data-add="Colgante Hoja">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Colgante Hoja</div>
+          <div class="detail">Plata 925 texturada</div>
+          <div class="price">$ 58.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="anillos" data-delay="2" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-neblina.jpg" alt="Anillo Neblina"></div>
+        <button class="quick-add" data-add="Anillo Neblina">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Anillo Neblina</div>
+          <div class="detail">Plata 925 · Cuarzo ahumado</div>
+          <div class="price">$ 81.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="aros" href="producto.html">
+        <span class="card-tag card-tag--sale">Últimas piezas</span>
+        <div class="frame"><img src="assets/img/producto-rescoldo.jpg" alt="Aros Rescoldo"></div>
+        <button class="quick-add" data-add="Aros Rescoldo">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Aros Rescoldo</div>
+          <div class="detail">Baño de oro · Granate</div>
+          <div class="price">$ 67.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="collares" data-delay="1" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-rocio.jpg" alt="Collar Rocío"></div>
+        <button class="quick-add" data-add="Collar Rocío">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Collar Rocío</div>
+          <div class="detail">Plata 925 · Topacio</div>
+          <div class="price">$ 88.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="anillos" data-delay="2" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-semilla.jpg" alt="Anillo Semilla"></div>
+        <button class="quick-add" data-add="Anillo Semilla">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Anillo Semilla</div>
+          <div class="detail">Plata 925 martillada</div>
+          <div class="price">$ 54.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="colgantes" href="producto.html">
+        <span class="card-tag">Nuevo</span>
+        <div class="frame"><img src="assets/img/producto-solsticio.jpg" alt="Colgante Solsticio"></div>
+        <button class="quick-add" data-add="Colgante Solsticio">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Colgante Solsticio</div>
+          <div class="detail">Baño de oro · Citrino</div>
+          <div class="price">$ 96.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="anillos" data-delay="1" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-umbral.jpg" alt="Anillo Umbral"></div>
+        <button class="quick-add" data-add="Anillo Umbral">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Anillo Umbral</div>
+          <div class="detail">Plata 925 · Labradorita</div>
+          <div class="price">$ 75.000</div>
+        </div>
+      </a>
+
+      <a class="product-card reveal" data-cat="pulseras" data-delay="2" href="producto.html">
+        <div class="frame"><img src="assets/img/producto-vertiente.jpg" alt="Pulsera Vertiente"></div>
+        <button class="quick-add" data-add="Pulsera Vertiente">Agregar rápido</button>
+        <div class="meta">
+          <div class="name">Pulsera Vertiente</div>
+          <div class="detail">Plata 925 · Amazonita</div>
+          <div class="price">$ 69.000</div>
+        </div>
+      </a>
+
+    </div>
+    <p class="shop-note">¿Buscás algo especial? Hacemos piezas a pedido — <a href="contacto.html" style="border-bottom:1px solid var(--amber);">escribinos</a></p>
+  </section>
+
+  <!-- ══════════ Footer ══════════ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo-bone.png" alt="Almendra">
+          <p>Joyería con alma, hecha a mano para florecer despacio.</p>
+        </div>
+        <div>
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="tienda.html">Anillos</a></li>
+            <li><a href="tienda.html">Collares</a></li>
+            <li><a href="tienda.html">Aros</a></li>
+            <li><a href="tienda.html">Pulseras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Almendra</h4>
+          <ul>
+            <li><a href="nosotros.html">Nuestra historia</a></li>
+            <li><a href="nosotros.html">El taller</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Seguinos</h4>
+          <ul>
+            <li><a href="https://instagram.com/poralmendra" target="_blank" rel="noopener">Instagram · @poralmendra</a></li>
+            <li><a href="mailto:hola@almendra.com">hola@almendra.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-big" aria-hidden="true">almendra</div>
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© 2026 Almendra Joyería — Hecho a mano</span>
+        <span>Envíos a todo el país · 3 cuotas sin interés</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Carrito -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer" aria-label="Carrito de compras">
+    <div class="cart-head">
+      <h3>Tu carrito</h3>
+      <button data-close-cart>Cerrar ✕</button>
+    </div>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="assets/img/producto-caleandula.jpg" alt="Anillo Caléndula">
+        <div>
+          <div class="ci-name">Anillo Caléndula</div>
+          <div class="ci-detail">Plata 925 · Piedra luna</div>
+          <div class="ci-qty">Talle 14 · Cant. 1</div>
+        </div>
+        <div class="ci-price">$ 78.000</div>
+      </div>
+      <div class="cart-item">
+        <img src="assets/img/producto-rocio.jpg" alt="Collar Rocío">
+        <div>
+          <div class="ci-name">Collar Rocío</div>
+          <div class="ci-detail">Plata 925 · Topacio</div>
+          <div class="ci-qty">45 cm · Cant. 1</div>
+        </div>
+        <div class="ci-price">$ 88.000</div>
+      </div>
+      <p class="cart-note">Cada pieza viaja en su bolsita de lino con una carta de cuidados ✦</p>
+    </div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><span>$ 166.000</span></div>
+      <p class="small">Envío calculado al finalizar la compra.</p>
+      <button class="btn btn--primary">Iniciar compra</button>
+    </div>
+  </aside>
+
+  <div class="toast" role="status"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

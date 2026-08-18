@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almendra — Joyería con alma · Hecha a mano</title>
+  <meta name="description" content="Joyería artesanal en plata y piedras naturales. Piezas hechas a mano, una por una, para florecer despacio.">
+  <link rel="icon" type="image/png" href="assets/img/logo-olive.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/almendra.css">
+</head>
+<body>
+
+  <!-- ══════════ Header ══════════ -->
+  <header class="site-header site-header--over-dark">
+    <div class="wrap">
+      <nav class="nav-left">
+        <a class="nav-link" href="tienda.html">Tienda</a>
+        <a class="nav-link" href="nosotros.html">Nosotros</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+      </nav>
+      <a class="brand" href="index.html" aria-label="Almendra — inicio">
+        <img class="logo-dark" src="assets/img/logo-olive.png" alt="Almendra">
+        <img class="logo-light" src="assets/img/logo-bone.png" alt="Almendra">
+      </a>
+      <div class="nav-right">
+        <button class="icon-btn" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Carrito" data-open-cart>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-count">2</span>
+        </button>
+        <button class="icon-btn menu-toggle" aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <nav class="mobile-menu">
+    <button class="close-menu">Cerrar ✕</button>
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda <em>· piezas</em></a>
+    <a href="nosotros.html">Nosotros <em>· el taller</em></a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- ══════════ Hero ══════════ -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow reveal">Joyería hecha a mano · Plata 925</span>
+        <h1 class="display hero-title reveal" data-delay="1">
+          Joyas para<br>florecer <span class="amber">despacio</span>
+        </h1>
+        <p class="hero-sub reveal" data-delay="2">
+          Piezas únicas en plata y piedras naturales, creadas una por una en nuestro taller.
+        </p>
+        <div class="hero-actions reveal" data-delay="3">
+          <a class="btn btn--primary" href="tienda.html">Ver la colección</a>
+          <a class="btn btn--bone" href="nosotros.html">Nuestra historia</a>
+        </div>
+      </div>
+      <figure class="hero-figure reveal" data-delay="2">
+        <div class="arch">
+          <img src="assets/img/editorial-quieto.jpg" alt="Collar Almendra sobre fondo en penumbra">
+        </div>
+        <svg class="hero-badge" viewBox="0 0 148 148">
+          <defs>
+            <path id="circ" d="M74 74 m-56 0 a56 56 0 1 1 112 0 a56 56 0 1 1 -112 0"/>
+          </defs>
+          <text><textPath href="#circ">hecho a mano · piedras naturales · hecho a mano ·&#160;</textPath></text>
+        </svg>
+      </figure>
+    </div>
+    <div class="hero-scroll">Descubrir</div>
+  </section>
+
+  <!-- ══════════ Marquesina ══════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Florecer despacio</span><span>Hecho a mano</span><span>Plata 925</span><span>Piedras naturales</span><span>Piezas únicas</span>
+      <span>Florecer despacio</span><span>Hecho a mano</span><span>Plata 925</span><span>Piedras naturales</span><span>Piezas únicas</span>
+    </div>
+  </div>
+
+  <!-- ══════════ Colección destacada ══════════ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Colección · Otoño 2026</span>
+          <h2 class="display">Piezas que <em>acompañan</em></h2>
+        </div>
+        <a class="link-line" href="tienda.html">Ver todo <span class="arrow">→</span></a>
+      </div>
+
+      <div class="product-grid">
+        <a class="product-card reveal" href="producto.html">
+          <span class="card-tag">Nuevo</span>
+          <div class="frame"><img src="assets/img/producto-caleandula.jpg" alt="Anillo Caléndula"></div>
+          <button class="quick-add" data-add="Anillo Caléndula">Agregar rápido</button>
+          <div class="meta">
+            <div class="name">Anillo Caléndula</div>
+            <div class="detail">Plata 925 · Piedra luna</div>
+            <div class="price">$ 78.000</div>
+          </div>
+        </a>
+        <a class="product-card reveal" data-delay="1" href="producto.html">
+          <div class="frame"><img src="assets/img/producto-brote.jpg" alt="Collar Brote"></div>
+          <button class="quick-add" data-add="Collar Brote">Agregar rápido</button>
+          <div class="meta">
+            <div class="name">Collar Brote</div>
+            <div class="detail">Baño de oro 18k</div>
+            <div class="price">$ 92.000</div>
+          </div>
+        </a>
+        <a class="product-card reveal" data-delay="2" href="producto.html">
+          <div class="frame"><img src="assets/img/producto-rocio.jpg" alt="Collar Rocío"></div>
+          <button class="quick-add" data-add="Collar Rocío">Agregar rápido</button>
+          <div class="meta">
+            <div class="name">Collar Rocío</div>
+            <div class="detail">Plata 925 · Topacio</div>
+            <div class="price">$ 88.000</div>
+          </div>
+        </a>
+        <a class="product-card reveal" data-delay="3" href="producto.html">
+          <span class="card-tag card-tag--sale">Últimas piezas</span>
+          <div class="frame"><img src="assets/img/producto-solsticio.jpg" alt="Colgante Solsticio"></div>
+          <button class="quick-add" data-add="Colgante Solsticio">Agregar rápido</button>
+          <div class="meta">
+            <div class="name">Colgante Solsticio</div>
+            <div class="detail">Baño de oro · Citrino</div>
+            <div class="price">$ 96.000</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Editorial ══════════ -->
+  <section class="editorial section">
+    <div class="wrap">
+      <figure class="editorial-figure reveal">
+        <div class="arch">
+          <img src="assets/img/editorial-campo.jpg" alt="Joyas Almendra en la naturaleza">
+        </div>
+        <svg class="stamp" viewBox="0 0 120 120">
+          <defs><path id="circ2" d="M60 60 m-45 0 a45 45 0 1 1 90 0 a45 45 0 1 1 -90 0"/></defs>
+          <text><textPath href="#circ2">almendra · joyería con alma ·&#160;</textPath></text>
+        </svg>
+      </figure>
+      <div class="editorial-copy">
+        <span class="eyebrow reveal">Nuestra filosofía</span>
+        <h2 class="display reveal" data-delay="1">Cada piedra guarda <em>una intención</em></h2>
+        <p class="reveal" data-delay="2">
+          Creemos que una joya no se compra: se encuentra. Trabajamos con piedras naturales
+          elegidas a mano — cuarzos, piedra luna, labradorita — y las engarzamos en plata
+          con técnicas que respetan sus formas originales.
+        </p>
+        <p class="reveal" data-delay="2">
+          Nada de producción en serie. Cada pieza nace de un dibujo, un fuego y unas manos,
+          y lleva las pequeñas marcas de ese camino.
+        </p>
+        <blockquote class="voice-quote reveal" data-delay="3">
+          “Que lo que uses todos los días te recuerde quién estás siendo.”
+        </blockquote>
+        <a class="link-line reveal" data-delay="3" href="nosotros.html">Conocer el taller <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Categorías ══════════ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow eyebrow--center">Explorar</span>
+        <h2 class="display">Buscá por <em>familia</em></h2>
+      </div>
+      <div class="cats">
+        <a class="cat-card reveal" href="tienda.html">
+          <div class="ring"><img src="assets/img/producto-semilla.jpg" alt="Anillos"></div>
+          <div class="cat-name">Anillos</div>
+          <div class="cat-sub">para las manos que hacen</div>
+        </a>
+        <a class="cat-card reveal" data-delay="1" href="tienda.html">
+          <div class="ring"><img src="assets/img/producto-rocio.jpg" alt="Collares"></div>
+          <div class="cat-name">Collares</div>
+          <div class="cat-sub">cerca del corazón</div>
+        </a>
+        <a class="cat-card reveal" data-delay="2" href="tienda.html">
+          <div class="ring"><img src="assets/img/producto-aro-lunar.jpg" alt="Aros"></div>
+          <div class="cat-name">Aros</div>
+          <div class="cat-sub">luz junto al rostro</div>
+        </a>
+        <a class="cat-card reveal" data-delay="3" href="tienda.html">
+          <div class="ring"><img src="assets/img/producto-vertiente.jpg" alt="Pulseras"></div>
+          <div class="cat-name">Pulseras</div>
+          <div class="cat-sub">el pulso de los días</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Valores ══════════ -->
+  <section class="values section--tight section">
+    <div class="wrap">
+      <div class="values-grid">
+        <div class="value reveal">
+          <div class="glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M7 11V7a1.5 1.5 0 0 1 3 0v4m0-1V5a1.5 1.5 0 0 1 3 0v6m0-1V6.5a1.5 1.5 0 0 1 3 0V13c0 4-2.5 7-6 7s-5.6-2.4-6.8-5.6c-.5-1.3-.2-2.4 1.3-2.4 1 0 1.7.6 2.5 2"/></svg>
+          </div>
+          <h3>Hecho a mano</h3>
+          <p>Cada pieza se forja, lima y pule en nuestro taller. No hay dos iguales.</p>
+        </div>
+        <div class="value reveal" data-delay="1">
+          <div class="glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M12 3 19 9l-2.5 9h-9L5 9l7-6Z"/><path d="M5 9h14M12 3v15"/></svg>
+          </div>
+          <h3>Piedras naturales</h3>
+          <p>Seleccionamos cada piedra por su energía, su color y su historia mineral.</p>
+        </div>
+        <div class="value reveal" data-delay="2">
+          <div class="glyph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M17 4a7.5 7.5 0 1 0 3 10.5A8 8 0 0 1 17 4Z"/><path d="m5.5 5.5.4 1.3 1.3.4-1.3.4-.4 1.3-.4-1.3-1.3-.4 1.3-.4.4-1.3Z"/></svg>
+          </div>
+          <h3>Con intención</h3>
+          <p>Diseñamos despacio, en pequeñas series estacionales que siguen los ciclos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Banda taller ══════════ -->
+  <section class="band section">
+    <div class="wrap">
+      <figure class="band-figure reveal">
+        <div class="arch"><img src="assets/img/taller-manos.jpg" alt="Manos trabajando una pieza en el taller"></div>
+        <div class="mini"><img src="assets/img/taller-detalle.jpg" alt="Detalle del taller"></div>
+      </figure>
+      <div>
+        <span class="eyebrow reveal">El taller</span>
+        <h2 class="display reveal" data-delay="1">Del fuego <em>a tu piel</em></h2>
+        <p class="reveal" data-delay="2">
+          Detrás de cada joya hay horas de banco: sierra, soldadura, engarce y pulido.
+          Almendra nació en un taller de barrio y sigue siendo eso — un lugar donde el
+          metal se trabaja con tiempo y con las manos.
+        </p>
+        <p class="reveal" data-delay="2">
+          Te invitamos a conocer el proceso completo, desde el dibujo hasta la última pasada de paño.
+        </p>
+        <a class="btn btn--bone reveal" data-delay="3" href="nosotros.html">Conocer la historia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ Newsletter ══════════ -->
+  <section class="newsletter section">
+    <div class="wrap reveal">
+      <span class="eyebrow eyebrow--center">Correo de luna nueva</span>
+      <h2 class="display">Cartas para <em>florecer</em></h2>
+      <p>Una carta por mes: lanzamientos, historias de piedras y acceso anticipado a las piezas únicas. Sin ruido.</p>
+      <form class="news-form" data-demo>
+        <input type="email" placeholder="tu@correo.com" aria-label="Tu correo" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════ Footer ══════════ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/logo-bone.png" alt="Almendra">
+          <p>Joyería con alma, hecha a mano para florecer despacio.</p>
+        </div>
+        <div>
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="tienda.html">Anillos</a></li>
+            <li><a href="tienda.html">Collares</a></li>
+            <li><a href="tienda.html">Aros</a></li>
+            <li><a href="tienda.html">Pulseras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Almendra</h4>
+          <ul>
+            <li><a href="nosotros.html">Nuestra historia</a></li>
+            <li><a href="nosotros.html">El taller</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Seguinos</h4>
+          <ul>
+            <li><a href="https://instagram.com/poralmendra" target="_blank" rel="noopener">Instagram · @poralmendra</a></li>
+            <li><a href="mailto:hola@almendra.com">hola@almendra.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-big" aria-hidden="true">almendra</div>
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© 2026 Almendra Joyería — Hecho a mano</span>
+        <span>Envíos a todo el país · 3 cuotas sin interés</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ Carrito ══════════ -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-drawer" aria-label="Carrito de compras">
+    <div class="cart-head">
+      <h3>Tu carrito</h3>
+      <button data-close-cart>Cerrar ✕</button>
+    </div>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="assets/img/producto-caleandula.jpg" alt="Anillo Caléndula">
+        <div>
+          <div class="ci-name">Anillo Caléndula</div>
+          <div class="ci-detail">Plata 925 · Piedra luna</div>
+          <div class="ci-qty">Talle 14 · Cant. 1</div>
+        </div>
+        <div class="ci-price">$ 78.000</div>
+      </div>
+      <div class="cart-item">
+        <img src="assets/img/producto-rocio.jpg" alt="Collar Rocío">
+        <div>
+          <div class="ci-name">Collar Rocío</div>
+          <div class="ci-detail">Plata 925 · Topacio</div>
+          <div class="ci-qty">45 cm · Cant. 1</div>
+        </div>
+        <div class="ci-price">$ 88.000</div>
+      </div>
+      <p class="cart-note">Cada pieza viaja en su bolsita de lino con una carta de cuidados ✦</p>
+    </div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><span>$ 166.000</span></div>
+      <p class="small">Envío calculado al finalizar la compra.</p>
+      <button class="btn btn--primary">Iniciar compra</button>
+    </div>
+  </aside>
+
+  <div class="toast" role="status"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
