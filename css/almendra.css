@@ -378,7 +378,11 @@ body::after {
   font-size: 1.02em;
   color: var(--amber);
   -webkit-text-stroke: 0;
-  margin-top: -0.04em;
+  /* Italiana y Cormorant tienen métricas distintas: con line-height 1.02 la tinta
+     de las dos líneas quedaba muy separada. Este margen negativo cierra el hueco
+     a ~0.12em. Si cambia el texto del título hay que recalibrarlo: depende de si
+     la primera línea tiene letras que bajan y la segunda letras que suben. */
+  margin-top: -0.14em;
 }
 .hero-sub {
   font-family: var(--font-voice);
