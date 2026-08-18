@@ -446,7 +446,7 @@ body::after {
   text-transform: uppercase;
   fill: var(--amber-soft);
   stroke: var(--ink);
-  stroke-width: 4.5px;
+  stroke-width: 1.1px;
   stroke-linejoin: round;
   paint-order: stroke fill;
 }
@@ -681,7 +681,7 @@ body::after {
   text-transform: uppercase;
   fill: var(--olive);
   stroke: var(--bone);
-  stroke-width: 3.5px;
+  stroke-width: 1.1px;
   stroke-linejoin: round;
   paint-order: stroke fill;
 }
