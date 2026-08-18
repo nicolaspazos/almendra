@@ -1302,8 +1302,10 @@ body::after {
   gap: clamp(14px, 2vw, 26px);
 }
 .atelier-grid figure { border-radius: 14px; overflow: hidden; position: relative; }
-.atelier-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
-.atelier-grid figure:hover img { transform: scale(1.05); }
+.atelier-grid img,
+.atelier-grid video { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
+.atelier-grid figure:hover img,
+.atelier-grid figure:hover video { transform: scale(1.05); }
 .at-1 { grid-column: 1 / 6; aspect-ratio: 4 / 4.6; border-radius: 999px 999px 14px 14px; }
 .at-2 { grid-column: 6 / 10; aspect-ratio: 4 / 5.2; margin-top: 60px; }
 .at-3 { grid-column: 10 / 13; aspect-ratio: 3 / 4.4; border-radius: 999px 999px 14px 14px; margin-top: 120px; }
@@ -1601,4 +1603,61 @@ body::after {
   .hero-actions .btn { width: 100%; }
   .pdp-buy { flex-direction: column; }
   .qty { justify-content: center; padding-block: 10px; }
+}
+
+/* ============================================================
+   Video dentro de los arcos
+   Los reels del Instagram de Almendra, recortados y en bucle.
+   ============================================================ */
+.arch video,
+.product-card .frame video,
+.atelier-grid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Marca "en vivo" sobre los bloques con video */
+.has-video { position: relative; }
+.has-video::after {
+  content: 'en el taller';
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--olive);
+  background: rgba(248, 243, 230, 0.9);
+  padding: 7px 16px 7px 26px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.has-video::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 27px;
+  z-index: 4;
+  margin-left: -52px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--terracota);
+  animation: latido 2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes latido {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .has-video::before { animation: none; }
 }
